@@ -1,0 +1,141 @@
+{
+    "title": "<h3>Policy {{policyType}} n.{{:rnd(1, 9999)}} del {{:moment().format('LL')}}<h3>",
+    "subtitle": "<h2>{{leader}} {{ofwhat}}<h2><h4>{{:oneof('DICHIARA', 'CONFESSA', 'AMMETTE', 'ASSEVERA')}} CHE E' {{adverb}} {{forbidden}}</h4>",
+    "content": "{{content1}} {{content2}} {{content3}}",
+    "content1": "<ul><li>{{activity:1}}</li><li>{{activity:2}}</li><li>{{activity:3}}</li><li>{{activity:4}}</li><li>{{activity:5}}</li></ul>",
+    "content2": "<h4>SI RAMMENTA ALTRESI' A{{:oneof('I DIPENDENTI', 'I FEDELI', ' GIORGIO', ' TUTTI')}} CHE, COME DA POLICY n.{{:rnd(1, 9999)}} DEL {{:rnd(2001, 2021)}}, E' {{adverb}} {{forbidden}}</h4>",
+    "content3": "<ul><li>{{activity:1}}</li><li>{{activity:2}}</li><li>{{activity:3}}</li><li>{{activity:4}}</li></ul>",
+    "adverb": [null, "ASSOLUTAMENTE", "RELATIVAMENTE", "TASSATIVAMENTE", "OBBLIGATORIAMENTE", "VIETATAMENTE"],
+    "forbidden": [ "VIETATO", "VIETATO", "OBBLIGATORIO", "OBBLIGATORIO", "FACOLTATIVO", "SUGGERITO" ],
+    "policyType": [
+        "ordinaria", "straordinaria", "eccezionale",
+        "premestruale", "standard", "tanto per far girare i coglioni",
+        "post-prandiale", "ad alto contenuto di cazzate"
+    ],
+    "leader": [
+        "Il Sindaco",
+        "Il Magnifico Rettore",
+        "Il Consiglio dei Cavalieri Jedi",
+        "La mamma dei cretini (quella che e' sempre incinta)",
+        "Il Gran Bidello",
+        "Quel gran pezzo dell'Ubalda, direttrice",
+        "Johnny Stecchino, capitano",
+        "Colui che e' Uno e Trino, leader supremo"
+    ],
+    "ofwhat": [
+        "degli uffici del terzo piano",
+        "della succursale torinese MSC",
+        "della flotta imperiale",
+        "del terzo ascensore",
+        "di Superga",
+        "del comune di Pinerolo",
+        "in pensione"
+    ],
+    "activity": "{{what}}{{who}}{{when}}{{exception}}",
+    "what": [
+        "Portarsi il pappagallo da casa per espletare le funzioni corporee",
+        "Fumare marijuana {{:oneof(null, 'legale')}}",
+        "Pippare cocaina",
+        "Abbandonare gli animali domestici in autostrada",
+        "Lasciare sulle scrivanie i propri sex toys",
+        "Fare Remote Working",
+        "Telecomandare un automa che faccia Remote Working",
+        "Togliersi la vita {{suicide}}",
+        "Invitare il proprio PO a suicidarsi {{suicide}}",
+        "Parcheggiare lato {{:oneof('via Nizza', 'corso Galimberti', 'per altezza diviso due')}}",
+        "Prendere {{masomenos}} di {{:rnd(2, 100)}} giorni di ferie {{maybenon}} consecutivi, purche' {{maybenon}} siano adiacenti a{{holiday}}",
+        "Usufruire di {{maybenon}} {{masomenos}} di {{:rnd(2, 3000)}} ore di ROL, purche' {{maybenon}} siano subito successive a{{holiday}}",
+        "Assentarsi il {{weekday}} per {{maybenon}} {{masomenos}} di {{:rnd(2, 8)}} ore",
+        "Fare uso di antidepressivi {{maybenon}} legali",
+        "Ascoltare Gigi d'Alessio a tutto volume",
+        "Guardare YouTube durante l'orario di lavoro"
+    ],
+    "masomenos": [ "piu'", "meno" ],
+    "maybenon": [ null, "non" ],
+    "suicide": [
+        "saltando dalla finestra",
+        "soffocandosi con un Buondi' Motta",
+        "con una overdose di caffe'",
+        "facendo seppuku con un coltello biodegradabile della Conad"
+    ],
+    "who": [
+        null,
+        ", solo per chi fosse ubicato negli uffici del {{:rnd(1, 25)}}' piano",
+        ", per chi ha la scrivania sita nei corridoi antistanti {{landmark}}",
+        ", per chi ha il {{:oneof('nome', 'cognome', 'soprannome')}} che inizia con {{:oneof('vocale', 'consonante')}}",
+        ", per i nati nel segno de{{zodiacsign}}",
+        ", per chi ha fatto il compleanno {{timeago}}",
+        ", per i dipendenti di sesso {{sex}}"
+    ],
+    "when": [
+        null,
+        ", sempre, anche di notte",
+        ", ogni {{:oneof('primo', 'secondo', 'terzo')}} {{weekday}} del mese",
+        ", dalle {{:oneof('8','9','10','11')}} alle {{:oneof('14','15','16','17')}}"
+    ],
+    "weekday": [
+        "lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato"
+    ],
+    "exception": [
+        null,
+        " (tranne il {{weekday}})",
+        " (solo se prima concordato con {{role}})",
+        " (ma al massimo {{:oneof('due', 'nove', 'ventordici')}} volte nell'arco dell'anno solare)"
+    ],
+    "role": [
+        "CDG",
+        "uno Scrum Master",
+        "Obi-Wan Kenobi",
+        "Papa Francesco",
+        "mio nonno",
+        "Sailor Moon"
+    ],
+    "landmark": [
+        "il Monumento ai Caduti nel Deploy del {{year}}",
+        "il boccione dell'acqua",
+        "lo spremiagrumi",
+        "il bagno delle donne",
+        "la fontana di Trevi",
+        "il busto in bronzo di Musumeci"
+    ],
+    "zodiacsign": [
+        "ll'ariete",
+        "lla bilancia",
+        "lla vergine",
+        "l leone",
+        "ll'ofiuco",
+        "l serpente di mare",
+        "l container",
+        "i pesci",
+        "l pericolo"
+    ],
+    "however": "<h4>FANNO ECCEZIONE E SONO ESENTATI DALLA PRESENTE POLICY</h4> {{exempts}}",
+    "exempts": "<ul><li>{{exempt:1}}</li><li>{{exempt:2}}</li><li>{{exempt:3}}</li></ul>",
+    "year": [ "1999", "2002", "1492", "1789", "0" ],
+    "timeago": [
+        "il mese scorso",
+        "{{:rnd(2, 199)}} mesi fa",
+        "ieri",
+        "ierl'altro",
+        "ierl'altr'altro",
+        "esattamente {{:rnd(24,48)}} ore fa"
+    ],
+    "exempt": [
+        "I sudditi ubicati subito dietro {{landmark}}",
+        "Gli iscritti all'ACI almeno dall'anno {{year}}",
+        "Luigi {{:oneof('XIII', 'XIV', 'XV')}}",
+        "I Cavalieri della Tavola Rotonda (tranne Lancillotto il fedifrago)",
+        "I nati sotto il segno de{{zodiacsign}}",
+        "I sette nani",
+        "I dipendenti di sesso {{sex}}",
+        "Holly & Benji",
+        "Coloro che hanno prestato servizio militare nel Battaglione San Marco",
+        "Gli assunti {{timeago}}"
+    ],
+    "sex": [
+        "maschile", "femminile", "indeterminato", "occasionale", "a pagamento"
+    ],
+    "holiday": [
+        " Natale", " Pasqua", " San Valentino", "lla Sagra della Porchetta", "l compleanno di {{role}}", "lla fine del mondo"
+    ]
+}
