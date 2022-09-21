@@ -13,7 +13,7 @@ module.exports = function(file) {
     const keys = Object.keys(grammar).filter(k => k !== "output");
 
     function rnd(min, max) {
-        return Math.floor(Math.random() * max) + min;
+        return Math.floor(Math.random() * (max - min)) + min;
     }
     
     function oneof() {

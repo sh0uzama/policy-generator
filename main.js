@@ -1,8 +1,12 @@
 const express = require('express');
+const eta = require('eta');
+
+const parser = require('./parser');
+const template = require('./template');
+
 const app = express();
 const port = process.env.PORT || 5000;
 
-const parser = require('./parser');
 const parse = parser('./grammar.json');
 
 // var result = parse("{{title}} {{subtitle}}");
@@ -11,12 +15,21 @@ const parse = parser('./grammar.json');
 // return;
 
 app.get('/', (req, res) => {
-    const result = parse("{{title}} {{subtitle}} {{content}}");
+
+    const title = parse("{{title}}");
+    const subtitle = parse("{{subtitle}}");
+    const content = parse("{{content}}");
     const however = parse("{{however}}");
-    res.send("<html><head><title>TEST</title></head><body>" 
-        + result
-        + however
-        + "</body></html>");
+
+    const result = eta.render(template, { 
+        title, 
+        subtitle, 
+        content, 
+        however 
+    });
+
+    res.send(result);
+    
 })
 
 app.listen(port, () => {
