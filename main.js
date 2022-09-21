@@ -9,10 +9,7 @@ const port = process.env.PORT || 5000;
 
 const parse = parser('./grammar.json');
 
-// var result = parse("{{title}} {{subtitle}}");
-// console.log(result);
-
-// return;
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 
@@ -20,16 +17,18 @@ app.get('/', (req, res) => {
     const subtitle = parse("{{subtitle}}");
     const content = parse("{{content}}");
     const however = parse("{{however}}");
+    const role = parse("{{role}}");
 
     const result = eta.render(template, { 
         title, 
         subtitle, 
         content, 
-        however 
+        however,
+        role
     });
 
     res.send(result);
-    
+
 })
 
 app.listen(port, () => {

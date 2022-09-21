@@ -3,37 +3,47 @@
     "subtitle": "{{leader}} {{ofwhat}}",
     "content": "{{intro}} {{content1}} {{content2}} {{content3}}",
     "policy-num": "n.{{:rnd(1, 9999)}}{{:oneof(null, '/bis', '/ter', '/69', '/420')}}",
-    "intro": "<h4>{{:oneof('DICHIARA', 'CONFESSA', 'AMMETTE', 'ASSEVERA')}} CHE E' {{adverb}} {{forbidden}}</h4>",
+    "intro": "<h4>{{:oneof('dichiara', 'confessa', 'ammette', 'assevera')}} che è {{adverb}} {{forbidden}}</h4>",
     "content1": "<ul><li>{{activity:1}}</li><li>{{activity:2}}</li><li>{{activity:3}}</li><li>{{activity:4}}</li><li>{{activity:5}}</li></ul>",
-    "content2": "<h4>SI RAMMENTA ALTRESI' A{{:oneof('I DIPENDENTI', 'I FEDELI', ' GIORGIO', ' TUTTI')}} CHE, COME DA POLICY {{policy-num}} DEL {{:rnd(2001, 2021)}}, E' {{adverb}} {{forbidden}}</h4>",
+    "content2": "<h4>si rammenta altresì a{{:oneof('i dipendenti', 'i fedeli', ' giorgio', ' tutti')}} che, come da policy {{policy-num}} del {{:rnd(1900, 2021)}}, è {{adverb}} {{forbidden}}</h4>",
     "content3": "<ul><li>{{activity:1}}</li><li>{{activity:2}}</li><li>{{activity:3}}</li><li>{{activity:4}}</li></ul>",
-    "adverb": [null, "ASSOLUTAMENTE", "RELATIVAMENTE", "TASSATIVAMENTE", "OBBLIGATORIAMENTE", "VIETATAMENTE"],
-    "forbidden": [ "VIETATO", "VIETATO", "OBBLIGATORIO", "OBBLIGATORIO", "FACOLTATIVO", "SUGGERITO" ],
+    "adverb": [null, "assolutamente", "relativamente", "tassativamente", "obbligatoriamente", "vietatamente"],
+    "forbidden": [ "vietato", "vietato", "obbligatorio", "obbligatorio", "facoltativo", "suggerito" ],
     "policyType": [
         "ordinaria", "straordinaria", "eccezionale",
         "premestruale", "standard", "tanto per far girare i coglioni",
-        "post-prandiale", "ad alto contenuto di cazzate"
+        "post-prandiale", "ad alto contenuto di cazzate",
+        "ordinariamente straordinaria", "non-standard"
     ],
     "leader": [
         "Il Sindaco",
         "Il Magnifico Rettore",
         "Il Consiglio dei Cavalieri Jedi",
-        "La mamma dei cretini (quella che e' sempre incinta)",
+        "La mamma dei cretini (quella che è sempre incinta)",
         "Il Gran Bidello",
         "Quel gran pezzo dell'Ubalda, direttrice",
         "Johnny Stecchino, capitano",
-        "Colui che e' Uno e Trino, leader supremo"
+        "Colui che è Uno e Trino, leader supremo",
+        "Sua Augusta Maestà Vittorio Emanuele IV, Principe",
+        "Ing. Dott. Lup. Mann. Gran. Figl. Di. Putt., Mega Direttore Generale",
+        "Camillo Benso Conte di {{city}}, assessore",
+        "Il Re ",
+        "L'Imperatore ",
+        "L'Ammiraglio ",
+        "Il Condottiero Supremo "
     ],
     "ofwhat": [
+        null,
         "degli uffici del terzo piano",
-        "della succursale torinese MSC",
+        "della succursale torinese di MSC",
         "della flotta imperiale",
         "del terzo ascensore",
-        "di Superga",
-        "del comune di Pinerolo",
+        "di {{city}}",
+        "del comune di {{city}}",
         "in pensione"
     ],
-    "activity": "{{what}}{{who}}{{when}}{{exception}}",
+    "city": [ "Superga", "Pinerolo", "Torino di Sangro", "Vergate sul Membro", "Polonghera", "Benevagienna", "Aramengo", "Cavour" ],
+    "activity": "{{what}}{{who}}{{when}}{{exception}}.",
     "what": [
         "Portarsi il pappagallo da casa per espletare le funzioni corporee",
         "Fumare marijuana {{:oneof(null, 'legale')}}",
@@ -44,28 +54,36 @@
         "Telecomandare un automa che faccia Remote Working",
         "Togliersi la vita {{suicide}}",
         "Invitare il proprio PO a suicidarsi {{suicide}}",
-        "Parcheggiare lato {{:oneof('via Nizza', 'corso Galimberti', 'per altezza diviso due')}}",
-        "Prendere {{masomenos}} di {{:rnd(2, 100)}} giorni di ferie {{maybenon}} consecutivi, purche' {{maybenon}} siano adiacenti a{{holiday}}",
-        "Usufruire di {{maybenon}} {{masomenos}} di {{:rnd(2, 3000)}} ore di ROL, purche' {{maybenon}} siano subito successive a{{holiday}}",
+        "Parcheggiare lato {{side}}",
+        "Prendere {{masomenos}} di {{:rnd(2, 100)}} giorni di ferie {{maybenon}} consecutivi, purchè {{maybenon}} siano adiacenti a{{holiday}}",
+        "Usufruire di {{maybenon}} {{masomenos}} di {{:rnd(2, 3000)}} ore di ROL, purchè {{maybenon}} siano subito successive a{{holiday}}",
         "Assentarsi il {{weekday}} per {{maybenon}} {{masomenos}} di {{:rnd(2, 8)}} ore",
         "Fare uso di antidepressivi {{maybenon}} legali",
         "Ascoltare Gigi d'Alessio a tutto volume",
-        "Guardare YouTube durante l'orario di lavoro"
+        "Guardare YouTube durante l'orario di lavoro",
+        "Usare la macchinetta del caffè più di una volta al {{timemeasure}}",
+        "Spremere più di {{:rnd(1, 20)}} arance al {{timemeasure}}",
+        "Affacciarsi alle finestre per vedere la gente in coda a Lingotto Fiere",
+        "Utilizzare un MAC con l'ormai obsoleto OSX-{{:rnd(10,999)}}",
+        "Indire e partecipare attivamente almeno a {{:rnd(40, 80)}} meeting-che-potevano-essere-una-email al {{timemeasure}}"
     ],
-    "masomenos": [ "piu'", "meno" ],
+    "side": [ "via Nizza",  "piazza Galimberti", "per altezza diviso due", "corso Valdobbiadene", "parcheggio abusivo" ],
+    "timemeasure": [ "giorno", "mese", "secondo", "minuto", "millisecondo", "lustro", "secolo", "millennio" ],
+    "masomenos": [ "più", "meno" ],
     "maybenon": [ null, "non" ],
     "suicide": [
         "saltando dalla finestra",
-        "soffocandosi con un Buondi' Motta",
-        "con una overdose di caffe'",
-        "facendo seppuku con un coltello biodegradabile della Conad"
+        "soffocandosi con un Buondì Motta",
+        "con una overdose di caffè",
+        "facendo seppuku con un coltello biodegradabile della Conad",
+        "linciato dal team dopo un [git push origin master --force]"
     ],
     "who": [
         null,
-        ", solo per chi fosse ubicato negli uffici del {{:rnd(1, 25)}}' piano",
+        ", solo per chi fosse ubicato negli uffici del {{:rnd(1, 25)}}° piano",
         ", per chi ha la scrivania sita nei corridoi antistanti {{landmark}}",
         ", per chi ha il {{:oneof('nome', 'cognome', 'soprannome')}} che inizia con {{:oneof('vocale', 'consonante')}}",
-        ", per i nati nel segno de{{zodiacsign}}",
+        ", per i nati sotto il segno de{{zodiacsign}}",
         ", per chi ha fatto il compleanno {{timeago}}",
         ", per i dipendenti di sesso {{sex}}"
     ],
@@ -73,16 +91,24 @@
         null,
         ", sempre, anche di notte",
         ", ogni {{:oneof('primo', 'secondo', 'terzo')}} {{weekday}} del mese",
-        ", dalle {{:oneof('8','9','10','11')}} alle {{:oneof('14','15','16','17')}}"
+        ", dalle {{:oneof('8','9','10','11')}} alle {{:oneof('14','15','16','17')}}",
+        ", solo il {{weekday}}"
     ],
     "weekday": [
-        "lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato"
+        "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"
     ],
     "exception": [
         null,
         " (tranne il {{weekday}})",
         " (solo se prima concordato con {{role}})",
-        " (ma al massimo {{:oneof('due', 'nove', 'ventordici')}} volte nell'arco dell'anno solare)"
+        " (ma al massimo {{:oneof('due', 'nove', 'otto e mezzo', 'settantasette', 'tredici', 'settundici', 'ventordici')}} volte nell'arco dell'anno solare)",
+        " (solo se non diversamente specificato da {{role}})",
+        " (NB: SOVRASCRIVE QUANTO SPECIFICATO NELLA POLICY {{policy-num}} del {{:rnd(1900, 2021)}})",
+        " (eccezion fatta per chi siede negli uffici che si affacciano su Piazza Risorgimento)",
+        " (come ribadito da {{role}} {{weekday}} scorso)",
+        " (ma alla fine fate un po' come cazzo vi pare, sono una policy non un poliziotto)",
+        " (questa non la capisco nemmeno io che l'ho scritta)",
+        " (con buona pace di {{role}}, che si oppone attivamente)"
     ],
     "role": [
         "CDG",
@@ -90,15 +116,26 @@
         "Obi-Wan Kenobi",
         "Papa Francesco",
         "mio nonno",
-        "Sailor Moon"
+        "Sailor Moon",
+        "Sirio il Dragone",
+        "Pollon",
+        "Zeus",
+        "Dracula",
+        "Ciro Bunniti detto 'Er Monnezza'",
+        "Carcarlo Pravettoni",
+        "Musumeci"
     ],
     "landmark": [
-        "il Monumento ai Caduti nel Deploy del {{year}}",
+        "il Monumento ai Caduti nel Deploy dell'anno {{year}}",
         "il boccione dell'acqua",
+        "il boccione del vino",
         "lo spremiagrumi",
         "il bagno delle donne",
         "la fontana di Trevi",
-        "il busto in bronzo di Musumeci"
+        "il busto in bronzo di {{role}}",
+        "il guardaroba",
+        "i condizionatori lato sud",
+        "l'ufficio di {{role}}"
     ],
     "zodiacsign": [
         "ll'ariete",
@@ -111,8 +148,8 @@
         "i pesci",
         "l pericolo"
     ],
-    "however": "<h4>FANNO ECCEZIONE E SONO ESENTATI DALLA PRESENTE POLICY</h4> {{exempts}}",
-    "exempts": "<ul><li>{{exempt:1}}</li><li>{{exempt:2}}</li><li>{{exempt:3}}</li></ul>",
+    "however": "<h4>fanno eccezione e sono esentati dalla presente policy</h4> {{exempts}}",
+    "exempts": "<ul><li>{{exempt:1}}.</li><li>{{exempt:2}}.</li><li>{{exempt:3}}.</li></ul>",
     "year": [ "1999", "2002", "1492", "1789", "0" ],
     "timeago": [
         "il mese scorso",
@@ -131,13 +168,24 @@
         "I sette nani",
         "I dipendenti di sesso {{sex}}",
         "Holly & Benji",
+        "Sirio il Dragone",
         "Coloro che hanno prestato servizio militare nel Battaglione San Marco",
-        "Gli assunti {{timeago}}"
+        "Gli assunti {{timeago}}",
+        "Coloro che verranno assunti da domani in poi",
+        "I dipendenti con una RAL maggiore di {{:rnd(100, 10000000)}} euro annui",
+        "Matteo Salvini",
+        "I caduti in guerra",
+        "I programmatori in pensione",
+        "Gli abitanti del Molise"
     ],
     "sex": [
         "maschile", "femminile", "indeterminato", "occasionale", "a pagamento"
     ],
     "holiday": [
-        " Natale", " Pasqua", " San Valentino", "lla Sagra della Porchetta", "l compleanno di {{role}}", "lla fine del mondo"
+        " Natale", " Pasqua", " San Valentino", 
+        "lla Sagra della Porchetta di {{city}}", 
+        "l compleanno di {{role}}", "lla fine del mondo",
+        " Torino Comics", "l Carnevale di Ivrea",
+        "lla festa patronale di {{city}}"
     ]
 }
