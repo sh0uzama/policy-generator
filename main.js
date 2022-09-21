@@ -3,6 +3,7 @@ const eta = require('eta');
 
 const parser = require('./parser');
 const template = require('./template');
+const package = require('./package.json');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,13 +19,15 @@ app.get('/', (req, res) => {
     const content = parse("{{content}}");
     const however = parse("{{however}}");
     const role = parse("{{role}}");
+    const version = package.version;
 
     const result = eta.render(template, { 
         title, 
         subtitle, 
         content, 
         however,
-        role
+        role,
+        version
     });
 
     res.send(result);

@@ -7,6 +7,7 @@ module.exports = `<html>
 </head>
 
 <body>
+    <header>policy-generator v<%= it.version %></header>
     <content>
         <h2><%~ it.title %></h2>
         <h3><%~ it.subtitle %></h3>

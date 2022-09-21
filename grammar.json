@@ -25,7 +25,7 @@
         "Johnny Stecchino, capitano",
         "Colui che è Uno e Trino, leader supremo",
         "Sua Augusta Maestà Vittorio Emanuele IV, Principe",
-        "Ing. Dott. Lup. Mann. Gran. Figl. Di. Putt., Mega Direttore Generale",
+        "Ing. Dott. Lup. Mann. Gran. Figl. Di. Putt. Mega Direttore Generale",
         "Camillo Benso Conte di {{city}}, assessore",
         "Il Re ",
         "L'Imperatore ",
@@ -47,7 +47,7 @@
     "what": [
         "Portarsi il pappagallo da casa per espletare le funzioni corporee",
         "Fumare marijuana {{:oneof(null, 'legale')}}",
-        "Pippare cocaina",
+        "Pippare righe di cocaina",
         "Abbandonare gli animali domestici in autostrada",
         "Lasciare sulle scrivanie i propri sex toys",
         "Fare Remote Working",
@@ -65,7 +65,8 @@
         "Spremere più di {{:rnd(1, 20)}} arance al {{timemeasure}}",
         "Affacciarsi alle finestre per vedere la gente in coda a Lingotto Fiere",
         "Utilizzare un MAC con l'ormai obsoleto OSX-{{:rnd(10,999)}}",
-        "Indire e partecipare attivamente almeno a {{:rnd(40, 80)}} meeting-che-potevano-essere-una-email al {{timemeasure}}"
+        "Indire e partecipare attivamente almeno a {{:rnd(40, 80)}} meeting-che-potevano-essere-una-email al {{timemeasure}}",
+        "Indossare il dispositivo aut.min.rich. di protezione e filtro per la respirazione polmonare oro-nasale ad introduzione di aria atmosferica nel corpo"
     ],
     "side": [ "via Nizza",  "piazza Galimberti", "per altezza diviso due", "corso Valdobbiadene", "parcheggio abusivo" ],
     "timemeasure": [ "giorno", "mese", "secondo", "minuto", "millisecondo", "lustro", "secolo", "millennio" ],
@@ -76,7 +77,7 @@
         "soffocandosi con un Buondì Motta",
         "con una overdose di caffè",
         "facendo seppuku con un coltello biodegradabile della Conad",
-        "linciato dal team dopo un [git push origin master --force]"
+        "linciato dal team dopo aver fatto un [git push origin master --force]"
     ],
     "who": [
         null,
@@ -92,7 +93,12 @@
         ", sempre, anche di notte",
         ", ogni {{:oneof('primo', 'secondo', 'terzo')}} {{weekday}} del mese",
         ", dalle {{:oneof('8','9','10','11')}} alle {{:oneof('14','15','16','17')}}",
-        ", solo il {{weekday}}"
+        ", solo il {{weekday}}",
+        ", solo nei giorni che finiscono per ì",
+        ", dal canto del gallo fino al crepuscolo {{:oneof(null, 'lunare')}}",
+        ", {{:oneof('prima della', 'dopo la')}} pausa caffè",
+        ", {{:oneof('prima di', 'dopo')}} pranzo",
+        ", {{:oneof('prima di', 'dopo')}} cena"
     ],
     "weekday": [
         "lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato"
@@ -116,7 +122,7 @@
         "Obi-Wan Kenobi",
         "Papa Francesco",
         "mio nonno",
-        "Sailor Moon",
+        "Sailor {{:oneof('Moon', 'Moon', 'Jupiter', 'Mars', 'Venus')}}",
         "Sirio il Dragone",
         "Pollon",
         "Zeus",
@@ -134,7 +140,8 @@
         "la fontana di Trevi",
         "il busto in bronzo di {{role}}",
         "il guardaroba",
-        "i condizionatori lato sud",
+        "il bagno privato di {{role}}",
+        "i condizionatori lato {{:oneof('nord', 'sud')}}",
         "l'ufficio di {{role}}"
     ],
     "zodiacsign": [
@@ -150,20 +157,21 @@
     ],
     "however": "<h4>fanno eccezione e sono esentati dalla presente policy</h4> {{exempts}}",
     "exempts": "<ul><li>{{exempt:1}}.</li><li>{{exempt:2}}.</li><li>{{exempt:3}}.</li></ul>",
-    "year": [ "1999", "2002", "1492", "1789", "0" ],
+    "year": [ "1999", "2002", "1492", "1789", "1000", "0" ],
     "timeago": [
         "il mese scorso",
         "{{:rnd(2, 199)}} mesi fa",
         "ieri",
         "ierl'altro",
         "ierl'altr'altro",
-        "esattamente {{:rnd(24,48)}} ore fa"
+        "esattamente {{:rnd(24,48)}} ore fa",
+        "mezz'ora fa"
     ],
     "exempt": [
         "I sudditi ubicati subito dietro {{landmark}}",
         "Gli iscritti all'ACI almeno dall'anno {{year}}",
         "Luigi {{:oneof('XIII', 'XIV', 'XV')}}",
-        "I Cavalieri della Tavola Rotonda (tranne Lancillotto il fedifrago)",
+        "I Cavalieri della Tavola Rotonda {{:oneof(null, '(tranne Lancillotto il fedifrago)')}}",
         "I nati sotto il segno de{{zodiacsign}}",
         "I sette nani",
         "I dipendenti di sesso {{sex}}",
@@ -172,7 +180,7 @@
         "Coloro che hanno prestato servizio militare nel Battaglione San Marco",
         "Gli assunti {{timeago}}",
         "Coloro che verranno assunti da domani in poi",
-        "I dipendenti con una RAL maggiore di {{:rnd(100, 10000000)}} euro annui",
+        "I dipendenti con una RAL {{:oneof('maggiore di', 'inferiore a')}} {{:rnd(100, 100000)}} euro annui",
         "Matteo Salvini",
         "I caduti in guerra",
         "I programmatori in pensione",
