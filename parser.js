@@ -2,6 +2,10 @@ import moment from "moment";
 
 const REX = /\{\{[^}]*\}\}/gm;
 
+function getRepetitions(inputString) {
+    
+}
+
 export default function(grammar) {
 
     function rnd(min, max) {
@@ -30,14 +34,25 @@ export default function(grammar) {
 
         if (matches) {
             for (const match of matches) {
-                var replacement;
+                var replacement = "";
                 const clean = match.replace("{{", "").replace("}}", "");
                 if (clean.startsWith(":")){
                     replacement = eval(clean.substring(1));
                 }
                 else {
-                    var key = clean.split(":", 1)[0];
-                    replacement = choose(key);
+                    const slices = clean.split(":", 2);
+                    const key = slices[0];
+                    const repeat = slices[1];
+                    var repetitions = 1;
+                    if (repeat && repeat.includes("-")) {
+                        const repSlices = repeat.split("-", 2);
+                        const min = parseInt(repSlices[0]);
+                        const max = parseInt(repSlices[1]);
+                        repetitions = rnd(min, max + 1);
+                    }
+                    for (let i = 0; i < repetitions; i++) {
+                        replacement += choose(key);
+                    }
                 }
                 output = output.replace(match, replacement);
             }

@@ -6,7 +6,8 @@ import pkg from "./package.json";
 
 async function load() {
 
-    const res = await fetch("grammar.json");
+    const res = await fetch("https://raw.githubusercontent.com/sh0uzama/grammar-repo/main/policy.json");
+    //const res = await fetch("test-grammar.json");
     const grammar = await res.json();
     
     const parse = parser(grammar);

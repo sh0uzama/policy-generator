@@ -1,0 +1,11 @@
+
+{
+    "title": "{{foo}}",
+    "subtitle": "--subtitle--",
+    "content": "<ul>{{sample:4-6}}</ul>",
+    "role": "--role--",
+    "however": "test",
+    "sample": "<li>{{sample2}}</li>",
+    "sample2": [ "1", "2", "3", "4" ],
+    "foo": ["a", "b"]
+}
