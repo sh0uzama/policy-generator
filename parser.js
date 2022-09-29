@@ -1,16 +1,8 @@
-const moment = require("moment");
-
-moment.locale('it');
+import moment from "moment";
 
 const REX = /\{\{[^}]*\}\}/gm;
 
-module.exports = function(file) {
-
-    const grammar = require(file);
-
-    const output = grammar.output;
-
-    const keys = Object.keys(grammar).filter(k => k !== "output");
+export default function(grammar) {
 
     function rnd(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;

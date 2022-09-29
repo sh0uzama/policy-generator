@@ -1,17 +1,18 @@
 {
   "name": "policy-generator",
-  "version": "0.0.2",
-  "description": "",
-  "main": "main.js",
+  "private": true,
+  "version": "0.0.3",
+  "type": "module",
   "scripts": {
-    "start": "node main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "MIT",
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
   "dependencies": {
     "eta": "^1.12.3",
-    "express": "^4.18.1",
     "moment": "^2.29.4"
   }
 }

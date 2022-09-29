@@ -1,5 +1,5 @@
 {
-    "title": "Policy {{policyType}} {{policy-num}} del {{:moment().format('LL')}}",
+    "title": "Policy {{policyType}} {{policy-num}} del {{:moment().format('DD/MM/YYYY')}}",
     "subtitle": "{{leader}} {{ofwhat}}",
     "content": "{{intro}} {{content1}} {{content2}} {{content3}}",
     "policy-num": "n.{{:rnd(1, 9999)}}{{:oneof(null, '/bis', '/ter', '/69', '/420')}}",
@@ -30,7 +30,8 @@
         "Il Re ",
         "L'Imperatore ",
         "L'Ammiraglio ",
-        "Il Condottiero Supremo "
+        "Il Condottiero Supremo ",
+        "Il Presidente del Consiglio "
     ],
     "ofwhat": [
         null,
@@ -40,9 +41,10 @@
         "del terzo ascensore",
         "di {{city}}",
         "del comune di {{city}}",
-        "in pensione"
+        "in pensione",
+        "di MSC Technology di {{city}}"
     ],
-    "city": [ "Superga", "Pinerolo", "Torino di Sangro", "Vergate sul Membro", "Polonghera", "Benevagienna", "Aramengo", "Cavour" ],
+    "city": [ "Superga", "Pinerolo", "Torino di Sangro", "Vergate sul Membro", "Polonghera", "Benevagienna", "Aramengo", "Cavour", "Bombonina" ],
     "activity": "{{what}}{{who}}{{when}}{{exception}}.",
     "what": [
         "Portarsi il pappagallo da casa per espletare le funzioni corporee",
@@ -50,14 +52,15 @@
         "Pippare righe di cocaina",
         "Abbandonare gli animali domestici in autostrada",
         "Lasciare sulle scrivanie i propri sex toys",
-        "Fare Remote Working",
-        "Telecomandare un automa che faccia Remote Working",
+        "Fare remote working",
+        "Telecomandare un automa che faccia remote working",
         "Togliersi la vita {{suicide}}",
         "Invitare il proprio PO a suicidarsi {{suicide}}",
         "Parcheggiare lato {{side}}",
         "Prendere {{masomenos}} di {{:rnd(2, 100)}} giorni di ferie {{maybenon}} consecutivi, purchè {{maybenon}} siano adiacenti a{{holiday}}",
         "Usufruire di {{maybenon}} {{masomenos}} di {{:rnd(2, 3000)}} ore di ROL, purchè {{maybenon}} siano subito successive a{{holiday}}",
         "Assentarsi il {{weekday}} per {{maybenon}} {{masomenos}} di {{:rnd(2, 8)}} ore",
+        "Prendere {{masomenos}} di {{:rnd(2, 100)}} giorni di ferie {{maybenon}} consecutivi, purchè {{maybenon}} siano adiacenti ai giorni di remote working di {{role}}",
         "Fare uso di antidepressivi {{maybenon}} legali",
         "Ascoltare Gigi d'Alessio a tutto volume",
         "Guardare YouTube durante l'orario di lavoro",
@@ -66,9 +69,10 @@
         "Affacciarsi alle finestre per vedere la gente in coda a Lingotto Fiere",
         "Utilizzare un MAC con l'ormai obsoleto OSX-{{:rnd(10,999)}}",
         "Indire e partecipare attivamente almeno a {{:rnd(40, 80)}} meeting-che-potevano-essere-una-email al {{timemeasure}}",
-        "Indossare il dispositivo aut.min.rich. di protezione e filtro per la respirazione polmonare oro-nasale ad introduzione di aria atmosferica nel corpo"
+        "Indossare il dispositivo aut.min.rich. di protezione e filtro per la respirazione polmonare oro-nasale ad introduzione di aria atmosferica nel corpo",
+        "Esternare la propria costernazione con bestemmioni ad alta voce"
     ],
-    "side": [ "via Nizza",  "piazza Galimberti", "per altezza diviso due", "corso Valdobbiadene", "parcheggio abusivo" ],
+    "side": [ "via Nizza",  "piazza Galimberti", "per altezza diviso due", "corso Valdobbiadene", "parcheggio abusivo", "piazza Quattro Cantoni", "casa di {{role}}" ],
     "timemeasure": [ "giorno", "mese", "secondo", "minuto", "millisecondo", "lustro", "secolo", "millennio" ],
     "masomenos": [ "più", "meno" ],
     "maybenon": [ null, "non" ],
@@ -86,7 +90,9 @@
         ", per chi ha il {{:oneof('nome', 'cognome', 'soprannome')}} che inizia con {{:oneof('vocale', 'consonante')}}",
         ", per i nati sotto il segno de{{zodiacsign}}",
         ", per chi ha fatto il compleanno {{timeago}}",
-        ", per i dipendenti di sesso {{sex}}"
+        ", per i dipendenti di sesso {{sex}}",
+        ", per i credenti e praticanti di fede {{religion}}",
+        ", solo per chi avesse il Q.I. inferiore a {{:rnd(90,110)}}"
     ],
     "when": [
         null,
@@ -94,7 +100,8 @@
         ", ogni {{:oneof('primo', 'secondo', 'terzo')}} {{weekday}} del mese",
         ", dalle {{:oneof('8','9','10','11')}} alle {{:oneof('14','15','16','17')}}",
         ", solo il {{weekday}}",
-        ", solo nei giorni che finiscono per ì",
+        ", solo nei giorni che finiscono per 'ì'",
+        ", dal sorgere del{{:oneof(' sole', 'la luna')}} fino alle prossime elezioni politiche",
         ", dal canto del gallo fino al crepuscolo {{:oneof(null, 'lunare')}}",
         ", {{:oneof('prima della', 'dopo la')}} pausa caffè",
         ", {{:oneof('prima di', 'dopo')}} pranzo",
@@ -114,7 +121,8 @@
         " (come ribadito da {{role}} {{weekday}} scorso)",
         " (ma alla fine fate un po' come cazzo vi pare, sono una policy non un poliziotto)",
         " (questa non la capisco nemmeno io che l'ho scritta)",
-        " (con buona pace di {{role}}, che si oppone attivamente)"
+        " (con buona pace di {{role}}, che si oppone attivamente)",
+        " (anche a stomaco {{:oneof('pieno', 'vuoto')}})"
     ],
     "role": [
         "CDG",
@@ -129,7 +137,8 @@
         "Dracula",
         "Ciro Bunniti detto 'Er Monnezza'",
         "Carcarlo Pravettoni",
-        "Musumeci"
+        "Musumeci",
+        "Giorgia Meloni"
     ],
     "landmark": [
         "il Monumento ai Caduti nel Deploy dell'anno {{year}}",
@@ -142,7 +151,8 @@
         "il guardaroba",
         "il bagno privato di {{role}}",
         "i condizionatori lato {{:oneof('nord', 'sud')}}",
-        "l'ufficio di {{role}}"
+        "l'ufficio di {{role}}",
+        "la rampa dove si fuma"
     ],
     "zodiacsign": [
         "ll'ariete",
@@ -152,6 +162,7 @@
         "ll'ofiuco",
         "l serpente di mare",
         "l container",
+        "l sagittario",
         "i pesci",
         "l pericolo"
     ],
@@ -184,7 +195,16 @@
         "Matteo Salvini",
         "I caduti in guerra",
         "I programmatori in pensione",
-        "Gli abitanti del Molise"
+        "Gli abitanti del Molise",
+        "I tesserati ARCI",
+        "I credenti e praticanti di fede {{religion}}"
+    ],
+    "religion": [
+        "Pastafariana",
+        "Cannibalista",
+        "Berlusconiana",
+        "C-Sharpista",
+        "Javascritta"
     ],
     "sex": [
         "maschile", "femminile", "indeterminato", "occasionale", "a pagamento"

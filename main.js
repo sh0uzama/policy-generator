@@ -1,39 +1,27 @@
-const express = require('express');
-const eta = require('eta');
+import * as eta from "eta";
 
-const parser = require('./parser');
-const template = require('./template');
-const package = require('./package.json');
+import parser from "./parser";
+import template from "./template";
+import pkg from "./package.json";
 
-const app = express();
-const port = process.env.PORT || 5000;
+async function load() {
 
-const parse = parser('./grammar.json');
+    const res = await fetch("grammar.json");
+    const grammar = await res.json();
+    
+    const parse = parser(grammar);
+    
+    const data = {
+        title: parse("{{title}}"),
+        subtitle: parse("{{subtitle}}"),
+        content: parse("{{content}}"),
+        however: parse("{{however}}"),
+        role: parse("{{role}}"),
+        version: pkg.version
+    }
+    
+    document.getElementById('app').innerHTML = eta.render(template, data);
 
-app.use(express.static('public'));
+}
 
-app.get('/', (req, res) => {
-
-    const title = parse("{{title}}");
-    const subtitle = parse("{{subtitle}}");
-    const content = parse("{{content}}");
-    const however = parse("{{however}}");
-    const role = parse("{{role}}");
-    const version = package.version;
-
-    const result = eta.render(template, { 
-        title, 
-        subtitle, 
-        content, 
-        however,
-        role,
-        version
-    });
-
-    res.send(result);
-
-})
-
-app.listen(port, () => {
-    console.log(`Policy app listening on port ${port}`);
-})
+window.addEventListener('load', load);
