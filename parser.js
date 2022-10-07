@@ -1,10 +1,4 @@
-import moment from "moment";
-
 const REX = /\{\{[^}]*\}\}/gm;
-
-function getRepetitions(inputString) {
-    
-}
 
 export default function(grammar) {
 

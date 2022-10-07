@@ -12,9 +12,5 @@
   },
   "devDependencies": {
     "vite": "^3.1.0"
-  },
-  "dependencies": {
-    "eta": "^1.12.3",
-    "moment": "^2.29.4"
   }
 }

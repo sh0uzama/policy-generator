@@ -1,5 +1,3 @@
-import * as eta from "eta";
-
 import parser from "./parser";
 import template from "./template";
 import pkg from "./package.json";
@@ -21,7 +19,7 @@ async function load() {
         version: pkg.version
     }
     
-    document.getElementById('app').innerHTML = eta.render(template, data);
+    document.getElementById('app').innerHTML = Eta.render(template, data);
 
 }
 
