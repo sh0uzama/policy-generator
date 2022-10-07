@@ -10,6 +10,8 @@ export default function(grammar) {
         return replaceTokens(arguments[rnd(0, arguments.length)]);
     }
     
+    oneof("");
+
     function choose(key) {
         const obj = grammar[key];
         if (Array.isArray(obj)) {
