@@ -4,6 +4,8 @@ html {
 
 body {
   padding: 24px;
+  background-color: #1e1e1e;
+  color: #ccc;
 }
 
 h2,
@@ -29,19 +31,20 @@ header,
 footer {
   position: fixed;
   height: 24px;
+  line-height: 24px;
   width: 100%;
   left: 0;
   text-align: center;
+  background: white;
+  color: black;
 }
 
 header {
   border-bottom: solid 1px;
   top: 0;
-  background: white;
 }
 
 footer {
   border-top: solid 1px;
-  background: lightgray;
   bottom: 0;
 }
